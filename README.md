@@ -1,18 +1,21 @@
 # Fork details  
+![Not Python 3 Ready](https://img.shields.io/badge/python_3_ready-no-red?logo=python)  
 This script relies a lot on old software. My goals are:
 - rewrite for Python 3
 - use bleak library instead of seemingly using a shell
 
 
-##Getting Started - Linux
-You need a Bluetooth adapter supporting at least Bluetooth 4.0. Almost any modern adapter will work. Check with lsusb:
+## Requirements  
+You need a recent version of bluez installed. You will also need the bleak library from PyPI.
+Your Bluetooth adapter must support at least Bluetooth 4.0, although most already meet this requirement.
+
+
+## Getting Started - Linux
 
 ```
 $ lsusb
 Bus 001 Device 005: ID 8087:0032 Intel Corp. AX210 Bluetooth
 ```
-
-You need a recent version of bluez installed. You will also need the bleak library from PyPI.
 
 
 Turn MiP on and search for it (you'll probably have to sudo):
@@ -31,7 +34,6 @@ Discovery started
 ```
 
 Grab the bluetooth address of MiP (in this case, B4:99:4C:59:F9:10). Time to start the script:
-
 ```
 $ python3 src/examples/turtle_example.py -b B4:99:4C:59:F9:10
 ```
